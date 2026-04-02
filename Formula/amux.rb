@@ -5,21 +5,21 @@
 class Amux < Formula
   desc "Terminal multiplexer for human+agent workflows"
   homepage "https://github.com/weill-labs/amux"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/weill-labs/amux/releases/download/v0.1.0/amux_0.1.0_darwin_amd64.tar.gz"
-      sha256 "784fa2bff5c3b9d6f350c99e7d7f1190a9f8c127bf0a2d23c97a7b4b877544d7"
+      url "https://github.com/weill-labs/amux/releases/download/v0.2.0/amux_0.2.0_darwin_amd64.tar.gz"
+      sha256 "a2a67591c779f3c1ad9c6b1563a38d8efd94c87d93f187ea585d8a6aa940c8d1"
 
       define_method(:install) do
         bin.install "amux"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/weill-labs/amux/releases/download/v0.1.0/amux_0.1.0_darwin_arm64.tar.gz"
-      sha256 "519bef973b12c5f9d4b17af3df7c30a36d34a2d1ada91e34b74baa221fe05a8f"
+      url "https://github.com/weill-labs/amux/releases/download/v0.2.0/amux_0.2.0_darwin_arm64.tar.gz"
+      sha256 "848977d74c9ab842f2a89391619fe6966fbf85067db4b9e5e42e1d5060821da8"
 
       define_method(:install) do
         bin.install "amux"
@@ -29,15 +29,15 @@ class Amux < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/weill-labs/amux/releases/download/v0.1.0/amux_0.1.0_linux_amd64.tar.gz"
-      sha256 "43a6bbe5c84bc4ab49a1b2f2912398e6126b1db70c0233851e369ec7ada487a2"
+      url "https://github.com/weill-labs/amux/releases/download/v0.2.0/amux_0.2.0_linux_amd64.tar.gz"
+      sha256 "acdb982bf66ee28d07fe0fbd1a476e66cf54ded7f9b0397eb11c80a8e5953d52"
       define_method(:install) do
         bin.install "amux"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/weill-labs/amux/releases/download/v0.1.0/amux_0.1.0_linux_arm64.tar.gz"
-      sha256 "2919e3c6fcbe7fb5a67990db3ab4bd6aa2a88e51ec6318aca65a546d6d24f902"
+      url "https://github.com/weill-labs/amux/releases/download/v0.2.0/amux_0.2.0_linux_arm64.tar.gz"
+      sha256 "ae1e69a663c9e0028b28546883dddbb19f8210bd0f8c56ed41195e990d8a4477"
       define_method(:install) do
         bin.install "amux"
       end
